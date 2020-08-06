@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="{{url_for('static', filename='air.css')}}">
+	<title>Air Quality Index</title>
+</head>
+<body>
+<h1>Air Quality Index</h1>
+
+<form action="/predict" method="post">
+	 <div id="i1">
+	<input type="number" name="T"   placeholder="Average Temperature (°C)" required  >
+	</div>
+	 
+	 <div id='i2'>
+	<input type="number" name="TM"  placeholder="Maximum temperature (°C)" size="22" required >
+	          </div>
+
+	    <div id="i3">
+	<input type="number" name="Tm" placeholder="Minimum temperature (°C)" required>
+	    </div>
+	           <div id="i4">
+	<input type="number" name="SLP"   placeholder="Atmospheric pressure at sea level (hPa)" size="33" required>
+	           </div>
+	           <div id="i5">
+	<input type="number" name="H"   placeholder="Average relative humidity (%)" size="24" required >
+	        </div>
+
+	         <div id="i6">   
+	<input type="number" name="VV"     placeholder="Average visibility (Km)" size="18" required >
+	        </div>
+	        
+	        <div id="i7">
+	<input type="number" name="V"   placeholder="Average wind speed (Km/h)" size="22" required >
+	     </div>
+	             
+	        <div id="i8">
+	<input type="number" name="VM"   placeholder="Maximum sustained wind speed (Km/h)" size="33" required>
+	     </div>
+
+	     <div id="i9">
+	     	<input type="submit" name="submit">
+	     </div>
+	             
+	
+
+</form>
+
+<h3>{{predictions}}</h3>
+</body>
+</html>
